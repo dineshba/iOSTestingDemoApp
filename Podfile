@@ -15,6 +15,7 @@ target 'CallbackFunctionsTesting' do
 
     pod 'Quick'
     pod 'Nimble'
+    pod 'OHHTTPStubs/Swift'
     # Pods for testing
   end
 

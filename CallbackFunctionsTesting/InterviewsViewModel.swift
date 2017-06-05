@@ -1,9 +1,15 @@
 import Foundation
+import UIKit
 
 class InterviewsViewModel {
 
     let interviewsService: InterviewsServiceProtocol
     var interviews: [Interview]
+    var completionBlock: ((Void) -> (Void))?
+
+    deinit {
+        print("deinit: InterviewsViewModel")
+    }
 
     init(interviewsService: InterviewsServiceProtocol) {
         self.interviewsService = interviewsService
@@ -19,7 +25,7 @@ class InterviewsViewModel {
         return interview.firstName! + " " +  interview.lastName!
     }
 
-    func getInterviews(_ completion: @escaping (Void) -> Void) {
+    func refreshInterviews() {
         interviewsService.getMyInterviews({myInterviews in
 
             if myInterviews.isEmpty {
@@ -29,7 +35,7 @@ class InterviewsViewModel {
             } else {
                 self.interviews = myInterviews
             }
-            completion()
+            self.completionBlock!()
         })
 
     }

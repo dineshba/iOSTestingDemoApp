@@ -6,10 +6,21 @@ class ViewController: UIViewController, UITableViewDataSource {
     
     var interviewsViewModel: InterviewsViewModel = InterviewsViewModel(interviewsService: InterviewsService())
 
+    deinit {
+        print("deinit: ViewController")
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        interviewsViewModel.completionBlock = { [weak self] in
+            self?.interviews.reloadData()
+        }
+        interviewsViewModel.refreshInterviews()
 
-        interviewsViewModel.getInterviews({self.interviews.reloadData()})
+    }
+
+    @IBAction func dismiss() {
+        self.dismiss(animated: true, completion: nil)
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

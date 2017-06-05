@@ -15,7 +15,9 @@
 		5B21B2F61ED727FB009207F2 /* CallbackFunctionsTestingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B21B2F51ED727FB009207F2 /* CallbackFunctionsTestingUITests.swift */; };
 		5B21B3041ED728EF009207F2 /* InterviewsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B21B3031ED728EF009207F2 /* InterviewsViewModel.swift */; };
 		5B21B3061ED72966009207F2 /* InterviewsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B21B3051ED72966009207F2 /* InterviewsService.swift */; };
-		5B4224621ED85987005B39AF /* InterviewServiceSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4224611ED85987005B39AF /* InterviewServiceSpec.swift */; };
+		5B4224621ED85987005B39AF /* InterviewViewModelSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4224611ED85987005B39AF /* InterviewViewModelSpec.swift */; };
+		5B4224641ED89989005B39AF /* InterviewServiceSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4224631ED89989005B39AF /* InterviewServiceSpec.swift */; };
+		5B4224661ED98453005B39AF /* DummyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4224651ED98453005B39AF /* DummyViewController.swift */; };
 		5BAA8A8C1ED7443B00043C05 /* Interview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BAA8A8B1ED7443B00043C05 /* Interview.swift */; };
 		7C6B3A5F54B03902E37DD999 /* Pods_CallbackFunctionsTestingUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AA900494A2DB4D6712E7012 /* Pods_CallbackFunctionsTestingUITests.framework */; };
 		A25CB1417548DFC144A8BC4F /* Pods_CallbackFunctionsTestingTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05844FE2F1A28F94C19F292A /* Pods_CallbackFunctionsTestingTests.framework */; };
@@ -60,7 +62,9 @@
 		5B21B2F71ED727FB009207F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5B21B3031ED728EF009207F2 /* InterviewsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InterviewsViewModel.swift; sourceTree = "<group>"; };
 		5B21B3051ED72966009207F2 /* InterviewsService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InterviewsService.swift; sourceTree = "<group>"; };
-		5B4224611ED85987005B39AF /* InterviewServiceSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InterviewServiceSpec.swift; sourceTree = "<group>"; };
+		5B4224611ED85987005B39AF /* InterviewViewModelSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InterviewViewModelSpec.swift; sourceTree = "<group>"; };
+		5B4224631ED89989005B39AF /* InterviewServiceSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InterviewServiceSpec.swift; sourceTree = "<group>"; };
+		5B4224651ED98453005B39AF /* DummyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DummyViewController.swift; sourceTree = "<group>"; };
 		5BAA8A8B1ED7443B00043C05 /* Interview.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Interview.swift; sourceTree = "<group>"; };
 		6BAC275875E5602505EC9B33 /* Pods-CallbackFunctionsTestingUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CallbackFunctionsTestingUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CallbackFunctionsTestingUITests/Pods-CallbackFunctionsTestingUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		81E5658DAA8323E19CA4020C /* Pods_CallbackFunctionsTesting.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CallbackFunctionsTesting.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -129,6 +133,7 @@
 				5B21B2DC1ED727FA009207F2 /* Assets.xcassets */,
 				5B21B2DE1ED727FA009207F2 /* LaunchScreen.storyboard */,
 				5B21B2E11ED727FA009207F2 /* Info.plist */,
+				5B4224651ED98453005B39AF /* DummyViewController.swift */,
 			);
 			path = CallbackFunctionsTesting;
 			sourceTree = "<group>";
@@ -137,7 +142,8 @@
 			isa = PBXGroup;
 			children = (
 				5B21B2EC1ED727FB009207F2 /* Info.plist */,
-				5B4224611ED85987005B39AF /* InterviewServiceSpec.swift */,
+				5B4224611ED85987005B39AF /* InterviewViewModelSpec.swift */,
+				5B4224631ED89989005B39AF /* InterviewServiceSpec.swift */,
 			);
 			path = CallbackFunctionsTestingTests;
 			sourceTree = "<group>";
@@ -456,6 +462,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5B21B2D81ED727FA009207F2 /* InterviewsViewController.swift in Sources */,
+				5B4224661ED98453005B39AF /* DummyViewController.swift in Sources */,
 				5B21B3041ED728EF009207F2 /* InterviewsViewModel.swift in Sources */,
 				5B21B2D61ED727FA009207F2 /* AppDelegate.swift in Sources */,
 				5B21B3061ED72966009207F2 /* InterviewsService.swift in Sources */,
@@ -467,7 +474,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5B4224621ED85987005B39AF /* InterviewServiceSpec.swift in Sources */,
+				5B4224641ED89989005B39AF /* InterviewServiceSpec.swift in Sources */,
+				5B4224621ED85987005B39AF /* InterviewViewModelSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
